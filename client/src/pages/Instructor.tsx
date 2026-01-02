@@ -203,6 +203,24 @@ export default function Instructor() {
                 />
               </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <div className="rounded-2xl overflow-hidden border border-border shadow-lg aspect-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/mud0QLBT-EA" 
+                  className="w-full h-full"
+                  title="Professora Areia Shorts"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
