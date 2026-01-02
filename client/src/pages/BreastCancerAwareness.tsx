@@ -91,9 +91,11 @@ export default function BreastCancerAwareness() {
           >
             <div className="rounded-2xl overflow-hidden border border-border shadow-sm aspect-video">
               <iframe 
-                src="https://www.youtube.com/embed/ZVZsH-pWapo" 
+                src="https://www.youtube.com/embed/ZVZsH-pWapo?rel=0" 
                 className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                title="Monitora Jinga - Breast Cancer Awareness Poema"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
