@@ -1,0 +1,29 @@
+# Copilot Instructions
+
+- Stack overview: Vite React client in client/, Express + tRPC API in server/, shared constants/types in shared/ for isomorphic code.
+- Dev workflow: `pnpm dev` runs server/_core/index.ts with Vite middleware (auto-picks open port starting at 3000); `pnpm build` runs Vite client build then esbuild on server/_core/index.ts; `pnpm start` serves dist build.
+- Testing: `pnpm test` executes Vitest for server-only specs (environment node) per [vitest.config.ts](vitest.config.ts#L1-L15).
+- Path aliases: use `@/*` for client src and `@shared/*` for shared/ (see [tsconfig.json](tsconfig.json#L18-L26)).
+- API surface: tRPC root router in [server/routers.ts](server/routers.ts#L1-L65) wires subrouters (system/auth/registrations). Add new endpoints via `publicProcedure`/`protectedProcedure`/`adminProcedure` from [server/_core/trpc.ts](server/_core/trpc.ts#L1-L42).
+- Gateway: Express setup in [server/_core/index.ts](server/_core/index.ts#L1-L60) registers OAuth callback, tRPC at `/api/trpc`, and serves Vite dev middleware or static dist.
+- Client routing: SPA routes defined with wouter in [client/src/App.tsx](client/src/App.tsx#L1-L35); keep auth requirements in mind for future routes.
+- tRPC client: created in [client/src/lib/trpc.ts](client/src/lib/trpc.ts#L1-L4) and configured in [client/src/main.tsx](client/src/main.tsx#L1-L52) with `httpBatchLink` to `/api/trpc`, `credentials: include`, and superjson transformer.
+- Unauthorized handling: client listens to React Query cache errors and redirects when `error.message === UNAUTHED_ERR_MSG` from [shared/const.ts](shared/const.ts#L1-L5); server must throw that message for unauthenticated flows.
+- Auth/session: OAuth callback handler in [server/_core/oauth.ts](server/_core/oauth.ts#L1-L47) exchanges code via Manus SDK, upserts user, sets JWT cookie `app_session_id` (1 year, SameSite=None, secure when HTTPS via [server/_core/cookies.ts](server/_core/cookies.ts#L1-L40)), then redirects to `/`.
+- Request auth: `createContext` in [server/_core/context.ts](server/_core/context.ts#L1-L30) uses `sdk.authenticateRequest` to verify session cookie and hydrate `ctx.user`; public procedures tolerate null user, protected/admin middleware enforce presence/role.
+- Admin detection: `sdk.authenticateRequest` maps `ENV.ownerOpenId` to admin role on upsert in [server/db.ts](server/db.ts#L1-L64); to gate features use `adminProcedure` (role === 'admin').
+- Manus SDK: lives in [server/_core/sdk.ts](server/_core/sdk.ts#L1-L160); it exchanges OAuth tokens, signs/verifies JWT sessions, auto-syncs user records, and depends on ENV secrets.
+- Registration flow: public mutation `registrations.create` (zod-validated) in [server/routers.ts](server/routers.ts#L15-L63) writes to DB and notifies owner; client form pattern in [client/src/components/RegisterInterestDialog.tsx](client/src/components/RegisterInterestDialog.tsx#L1-L80).
+- Notifications: owner alerts go through Manus Forge API in [server/_core/notification.ts](server/_core/notification.ts#L1-L70) and require `BUILT_IN_FORGE_API_URL`/`BUILT_IN_FORGE_API_KEY` envs; surfaces TRPC errors on validation.
+- Database: Drizzle MySQL schema in [drizzle/schema.ts](drizzle/schema.ts#L1-L58); `getDb` is lazy and allows missing DB for local tooling—callers must handle null DB gracefully. Use `pnpm db:push` (drizzle-kit generate + migrate) with `DATABASE_URL` set (see [drizzle.config.ts](drizzle.config.ts#L1-L17)).
+- User table: fields include `role` enum and `lastSignedIn` timestamps; registration table stores parent/child details with optional age/notes (see [drizzle/schema.ts](drizzle/schema.ts#L7-L35)).
+- Shared errors: use helpers in [shared/_core/errors.ts](shared/_core/errors.ts#L1-L18) for HTTP-style errors outside tRPC.
+- Styling: Tailwind v4 + tw-animate CSS entry in [client/src/index.css](client/src/index.css#L1-L120) with custom palette and fonts; components live under client/src/components/ui/ (shadcn-style).
+- Env surface: server expects `VITE_APP_ID`, `JWT_SECRET`, `DATABASE_URL`, `OAUTH_SERVER_URL`, `OWNER_OPEN_ID`, `BUILT_IN_FORGE_API_URL`, `BUILT_IN_FORGE_API_KEY`; client expects `VITE_APP_ID` and `VITE_OAUTH_PORTAL_URL` for login URL (see [server/_core/env.ts](server/_core/env.ts#L1-L10) and [client/src/const.ts](client/src/const.ts#L1-L17)).
+- Login URL builder: [client/src/const.ts](client/src/const.ts#L1-L17) encodes redirect in `state` (base64) to `/api/oauth/callback`; keep this contract if adjusting auth flows.
+- Static serving: prod assets served from dist/public via [server/_core/vite.ts](server/_core/vite.ts#L1-L63); ensure client build runs before `pnpm start`.
+- Errors & limits: Express body parser bumped to 50mb for uploads; keep in sync if adding file endpoints (see [server/_core/index.ts](server/_core/index.ts#L15-L28)).
+- tRPC serialization: superjson configured both sides; prefer data types compatible with superjson (Date, Map, etc.).
+- Module format: repo uses ESM (`type: module`) and esbuild bundling for server; avoid CommonJS patterns.
+- Lint/format: `pnpm format` runs Prettier; `pnpm check` runs `tsc --noEmit` (tests excluded via tsconfig).
+- Patches: pnpm applies [patches/wouter@3.7.1.patch](patches/wouter@3.7.1.patch); avoid upgrading wouter without revisiting patch.
