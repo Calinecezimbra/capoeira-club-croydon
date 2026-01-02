@@ -98,6 +98,37 @@ export default function SchoolCollaborations() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
+                See Our School Workshops in Action
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Watch how we bring capoeira and Afro-Brazilian culture to life in schools across Croydon.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-border shadow-lg aspect-video">
+              <iframe 
+                src="https://www.youtube.com/embed/JVyX5xABFWQ" 
+                className="w-full h-full"
+                title="Capoeira School Workshop"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Overview */}
       <section className="py-20 bg-background">
         <div className="container">
