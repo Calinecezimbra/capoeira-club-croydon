@@ -125,10 +125,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Women-led. Community-powered. Rooted in Afro-Brazilian culture. Building strength, confidence, and connection in Croydon.
               </p>
               <div className="flex gap-4 pt-2">
-                <a href="https://instagram.com/capoeirainmotion" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
+                <a href="https://www.instagram.com/capoeiraclubcroydon/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="mailto:contact@capoeiraclubcroydon.co.uk" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
+                <a href="mailto:capoeiraclubcroydon@gmail.com" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
                   <Mail className="h-5 w-5" />
                 </a>
               </div>

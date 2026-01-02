@@ -121,7 +121,7 @@ ${message}`;
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-primary mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@capoeiraclubcroydon.co.uk</p>
+                    <p className="text-muted-foreground">capoeiraclubcroydon@gmail.com</p>
                   </div>
                 </div>
 
@@ -131,7 +131,7 @@ ${message}`;
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-primary mb-1">Social Media</h3>
-                    <a href="https://instagram.com/capoeiraclubcroydon" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
+                    <a href="https://www.instagram.com/capoeiraclubcroydon/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
                       @capoeiraclubcroydon
                     </a>
                   </div>
