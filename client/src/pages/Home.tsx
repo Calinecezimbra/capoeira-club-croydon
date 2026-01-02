@@ -104,7 +104,7 @@ export default function Home() {
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img 
-                  src="/images/5155c082-1dfa-4170-9118-8af7b89f798a.jpg" 
+                  src="/images/1acaf9a9-hero-group.jpg" 
                   alt="Capoeira Roda" 
                   className="w-full h-auto object-cover"
                 />
