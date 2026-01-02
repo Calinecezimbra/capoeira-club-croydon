@@ -3,7 +3,20 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Instagram, Facebook, Music } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import React from "react";
+
+const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    {...props}
+  >
+    <path d="M9 3h3.2c.2 2.3 1.5 3.8 3.3 4V9c-1.4-.1-2.5-.6-3.3-1.3v4.6c0 2.5-2 4.6-4.5 4.7-2.6 0-4.7-2-4.7-4.6 0-2.5 2-4.6 4.6-4.6.2 0 .3 0 .5.1v2.4c-.2-.1-.3-.1-.5-.1-1.2 0-2.1 1-2.1 2.2s1 2.1 2.2 2.1c1.1 0 2.1-.9 2.1-2V3z" />
+  </svg>
+);
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -134,30 +147,30 @@ ${message}`;
                     <a href="https://www.instagram.com/capoeiraclubcroydon/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
                       @capoeiraclubcroydon
                     </a>
+                  </div>
+                </div>
 
-                                  <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-                                      <Music className="h-6 w-6" />
-                                    </div>
-                                    <div>
-                                      <h3 className="font-bold text-lg text-primary mb-1">TikTok</h3>
-                                      <a href="https://www.tiktok.com/@capoeira.club.cro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
-                                        @capoeira.club.cro
-                                      </a>
-                                    </div>
-                                  </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                    <TikTokIcon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-primary mb-1">TikTok</h3>
+                    <a href="https://www.tiktok.com/@capoeira.club.cro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
+                      @capoeira.club.cro
+                    </a>
+                  </div>
+                </div>
 
-                                  <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-                                      <Facebook className="h-6 w-6" />
-                                    </div>
-                                    <div>
-                                      <h3 className="font-bold text-lg text-primary mb-1">Facebook</h3>
-                                      <a href="https://www.facebook.com/p/Capoeira-Club-Croydon-100090366679284/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
-                                        Capoeira Club Croydon
-                                      </a>
-                                    </div>
-                                  </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                    <Facebook className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-primary mb-1">Facebook</h3>
+                    <a href="https://www.facebook.com/p/Capoeira-Club-Croydon-100090366679284/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
+                      Capoeira Club Croydon
+                    </a>
                   </div>
                 </div>
               </div>

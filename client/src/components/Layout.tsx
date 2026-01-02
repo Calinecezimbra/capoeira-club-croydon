@@ -1,8 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Instagram, Mail, MapPin, Phone, Facebook, Music } from "lucide-react";
+import { Menu, Instagram, Mail, MapPin, Phone, Facebook } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
+
+const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    {...props}
+  >
+    <path d="M9 3h3.2c.2 2.3 1.5 3.8 3.3 4V9c-1.4-.1-2.5-.6-3.3-1.3v4.6c0 2.5-2 4.6-4.5 4.7-2.6 0-4.7-2-4.7-4.6 0-2.5 2-4.6 4.6-4.6.2 0 .3 0 .5.1v2.4c-.2-.1-.3-.1-.5-.1-1.2 0-2.1 1-2.1 2.2s1 2.1 2.2 2.1c1.1 0 2.1-.9 2.1-2V3z" />
+  </svg>
+);
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -128,8 +140,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <a href="https://www.instagram.com/capoeiraclubcroydon/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                                <a href="https://www.tiktok.com/@capoeira.club.cro" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
-                                  <Music className="h-5 w-5" />
+                <a href="https://www.tiktok.com/@capoeira.club.cro" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
+                  <TikTokIcon className="h-5 w-5" />
                                 </a>
                                 <a href="https://www.facebook.com/p/Capoeira-Club-Croydon-100090366679284/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
                                   <Facebook className="h-5 w-5" />
