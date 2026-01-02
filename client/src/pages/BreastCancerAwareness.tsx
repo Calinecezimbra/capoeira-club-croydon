@@ -90,10 +90,11 @@ export default function BreastCancerAwareness() {
             className="max-w-2xl mx-auto mb-20"
           >
             <div className="rounded-2xl overflow-hidden border border-border shadow-sm aspect-video">
-              <video 
-                src="/images/user_upload/Captions_FED217.mp4" 
-                controls 
+              <iframe 
+                src="https://www.youtube.com/embed/ZVZsH-pWapo" 
                 className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
             </div>
             <p className="mt-4 text-center text-muted-foreground leading-relaxed">
