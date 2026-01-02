@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Music } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -130,10 +130,34 @@ ${message}`;
                     <Instagram className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-primary mb-1">Social Media</h3>
+                    <h3 className="font-bold text-lg text-primary mb-1">Instagram</h3>
                     <a href="https://www.instagram.com/capoeiraclubcroydon/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
                       @capoeiraclubcroydon
                     </a>
+
+                                  <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                                      <Music className="h-6 w-6" />
+                                    </div>
+                                    <div>
+                                      <h3 className="font-bold text-lg text-primary mb-1">TikTok</h3>
+                                      <a href="https://www.tiktok.com/@capoeira.club.cro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
+                                        @capoeira.club.cro
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <div className="flex items-start gap-4">
+                                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                                      <Facebook className="h-6 w-6" />
+                                    </div>
+                                    <div>
+                                      <h3 className="font-bold text-lg text-primary mb-1">Facebook</h3>
+                                      <a href="https://www.facebook.com/p/Capoeira-Club-Croydon-100090366679284/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors">
+                                        Capoeira Club Croydon
+                                      </a>
+                                    </div>
+                                  </div>
                   </div>
                 </div>
               </div>

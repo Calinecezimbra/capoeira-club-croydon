@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Menu, Instagram, Mail, MapPin, Phone, Facebook, Music } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 
@@ -128,6 +128,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <a href="https://www.instagram.com/capoeiraclubcroydon/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
+                                <a href="https://www.tiktok.com/@capoeira.club.cro" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
+                                  <Music className="h-5 w-5" />
+                                </a>
+                                <a href="https://www.facebook.com/p/Capoeira-Club-Croydon-100090366679284/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
+                                  <Facebook className="h-5 w-5" />
+                                </a>
                 <a href="mailto:capoeiraclubcroydon@gmail.com" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors">
                   <Mail className="h-5 w-5" />
                 </a>
