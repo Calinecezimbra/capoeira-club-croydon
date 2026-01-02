@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Instagram, Mail, MapPin, Phone, Facebook } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
+import { useIsomorphicLayoutEffect } from "react-use";
 
 const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -19,6 +20,11 @@ const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
+
+  // Always reset scroll to top on route change to avoid mid-page landings on mobile
+  useIsomorphicLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [location]);
 
   useEffect(() => {
     const handleScroll = () => {
