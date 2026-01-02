@@ -131,6 +131,63 @@ export default function Instructor() {
           </div>
         </div>
       </section>
+
+      {/* Video Gallery */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
+              See Professora Areia in Action
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Watch demonstrations and performances showcasing the art of Capoeira and Brazilian dance.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="rounded-2xl overflow-hidden border border-border shadow-lg aspect-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/sCyH4bY61q8" 
+                  className="w-full h-full"
+                  title="Professora Areia Capoeira"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="rounded-2xl overflow-hidden border border-border shadow-lg aspect-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/iZrG02v0Vos" 
+                  className="w-full h-full"
+                  title="Professora Areia Performance"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
