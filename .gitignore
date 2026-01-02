@@ -101,6 +101,10 @@ jspm_packages/
 tmp/
 temp/
 
+# Large local-only assets (prevent oversized pushes)
+client/public/images/real/Capoeira_History_Cultural_Impact.pptx
+client/public/images/user_upload/Captions_FED217.mp4
+
 # Database
 *.db
 *.sqlite
