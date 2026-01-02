@@ -20,11 +20,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
 
-  // Always reset scroll to top on route change to avoid mid-page landings on mobile
-  useIsomorphicLayoutEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, [location]);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
