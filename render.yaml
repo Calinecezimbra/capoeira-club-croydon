@@ -3,7 +3,7 @@ services:
     name: capoeira-club-croydon
     runtime: node
     region: frankfurt  # change to closest region (e.g. oregon, ohio, singapore)
-    buildCommand: pnpm install && pnpm run build
+    buildCommand: npm install --global pnpm@10.27.0 && pnpm install && pnpm run build
     startCommand: pnpm start
     plan: free
     envVars:
