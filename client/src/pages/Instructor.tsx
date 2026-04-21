@@ -91,7 +91,7 @@ export default function Instructor() {
                 <motion.div variants={fadeIn} className="bg-muted/30 p-8 rounded-2xl border-l-4 border-secondary mb-10">
                   <h3 className="text-2xl font-heading font-bold text-primary mb-4">My Journey of Growth and Purpose</h3>
                   <p className="text-muted-foreground mb-4">
-                    Earlier this year, in April, I was diagnosed with breast cancer. This diagnosis changed my perspective on everything, but it also revealed something profound: the true power of Capoeira.
+                    In April 2025, I was diagnosed with breast cancer. This diagnosis changed my perspective on everything, but it also revealed something profound: the true power of Capoeira.
                   </p>
                   <p className="text-muted-foreground font-medium italic">
                     "During my battle, I turned to the art form that has defined my life, and it became my sanctuary, my strength, and my weapon against fear. Capoeira kept me moving, kept me fighting, and kept my spirit alive."
