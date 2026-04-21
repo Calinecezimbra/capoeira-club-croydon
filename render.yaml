@@ -4,7 +4,7 @@ services:
     runtime: node
     region: frankfurt
     plan: free
-    buildCommand: pnpm install && pnpm run build
+    buildCommand: npm install --global pnpm@10.27.0 && pnpm install && pnpm run build
     startCommand: pnpm start
     envVars:
       - key: NODE_ENV
@@ -15,7 +15,17 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
+      - key: VITE_APP_ID
+        sync: false
+      - key: OAUTH_SERVER_URL
+        sync: false
+      - key: OWNER_OPEN_ID
+        sync: false
       - key: GMAIL_USER
         sync: false
       - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: BUILT_IN_FORGE_API_URL
+        sync: false
+      - key: BUILT_IN_FORGE_API_KEY
         sync: false
