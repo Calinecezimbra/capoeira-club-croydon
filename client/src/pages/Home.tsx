@@ -502,7 +502,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-bold">Next Class</p>
-                      <p className="text-primary-foreground/70">This Friday at 7:00 PM</p>
+                      <p className="text-primary-foreground/70">This Wednesday at 7:30 PM</p>
                     </div>
                   </div>
                 </div>
