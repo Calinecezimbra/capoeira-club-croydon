@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, MapPin, CheckCircle } from "lucide-react";
 import { RegisterInterestDialog } from "@/components/RegisterInterestDialog";
-import { FamilyClassRegistrationDialog } from "@/components/FamilyClassRegistrationDialog";
 import { SENDClassRegistrationDialog } from "@/components/SENDClassRegistrationDialog";
 import { Link } from "wouter";
 
@@ -145,14 +144,19 @@ export default function Classes() {
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="h-5 w-5 text-secondary" />
-                    <span className="font-medium text-primary">Croydon, UK</span>
+                    <span className="font-medium text-primary">Lewisham, UK</span>
                   </div>
                   <p className="text-sm text-muted-foreground pt-2">
                     A wonderful opportunity for parents and children to bond, move, and learn together. Build strength and connection as a family unit.
                   </p>
-                  <FamilyClassRegistrationDialog 
-                    className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
-                  />
+                  <a
+                    href="https://all.lewisham.gov.uk/enrol/index.php?id=26205"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full mt-4"
+                  >
+                    <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Sign Up</Button>
+                  </a>
                 </div>
               </motion.div>
 
