@@ -196,8 +196,8 @@ export default function JoinNow() {
                   <Calendar className="h-8 w-8 text-secondary flex-shrink-0" />
                   <div>
                     <h3 className="font-bold text-xl mb-2">When</h3>
-                    <p className="text-primary-foreground/90">Every Friday</p>
-                    <p className="text-primary-foreground/90">7:30 PM - 8:40 PM</p>
+                    <p className="text-primary-foreground/90">Every Wednesday</p>
+                    <p className="text-primary-foreground/90">7:30 PM - 8:45 PM</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

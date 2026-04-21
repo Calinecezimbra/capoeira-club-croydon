@@ -111,7 +111,7 @@ export default function AdultClass() {
                   Class Schedule
                 </h3>
                 <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <p className="text-lg font-semibold text-primary mb-2">🔹 Fridays 7:30 PM to 8:45 PM</p>
+                  <p className="text-lg font-semibold text-primary mb-2">🔹 Wednesdays 7:30 PM to 8:45 PM</p>
                   <p className="text-muted-foreground">Duration: 1 hour 15 minutes per session</p>
                 </div>
               </div>

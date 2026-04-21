@@ -104,7 +104,7 @@ export default function Classes() {
                 <div className="p-6 space-y-4">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Calendar className="h-5 w-5 text-secondary" />
-                    <span className="font-medium text-primary">Fridays</span>
+                    <span className="font-medium text-primary">Wednesdays</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Clock className="h-5 w-5 text-secondary" />
