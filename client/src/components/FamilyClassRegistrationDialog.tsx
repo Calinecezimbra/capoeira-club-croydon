@@ -24,7 +24,7 @@ export function FamilyClassRegistrationDialog({ className }: Props) {
     e.preventDefault();
     
     if (timeConfirmation !== "yes") {
-      toast.error("Please confirm that Saturday 10am-11am works for you");
+      toast.error("Please confirm that Saturday 10:00am–11:30am works for you");
       return;
     }
 
@@ -35,7 +35,7 @@ export function FamilyClassRegistrationDialog({ className }: Props) {
 
     const message = `*Family Capoeira Registration*
     
-*Time Confirmation:* Saturday 10am-11am ✓
+*Time Confirmation:* Saturday 10:00am–11:30am ✓
 *Parent Name:* ${parentName}
 *Kids Name(s):* ${kidsNames}
 *Kids Age(s):* ${kidsAges}
@@ -74,7 +74,7 @@ export function FamilyClassRegistrationDialog({ className }: Props) {
           <div className="space-y-4">
             <div className="space-y-3">
               <Label className="text-base font-semibold">
-                Is Saturday 10am-11am a good time for your family? *
+                Is Saturday 10:00am–11:30am a good time for your family? *
               </Label>
               <RadioGroup value={timeConfirmation} onValueChange={setTimeConfirmation}>
                 <div className="flex items-center space-x-2">
