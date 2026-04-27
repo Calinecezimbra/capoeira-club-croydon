@@ -307,14 +307,18 @@ export default function Home() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-heading font-bold text-primary mb-3">Capoeira Classes for Adults</h3>
                 <p className="text-muted-foreground mb-6">
-                  Join our supportive adult classes where beginners and experienced practitioners train together. Build fitness, learn authentic techniques, and connect.
+                  We now have new class times and a new address in Croydon —
+                  contact us for the address after booking confirmation.
                 </p>
-                <div className="flex items-center gap-2 text-sm text-primary font-medium mb-6">
-                  <Calendar className="h-4 w-4 text-secondary" />
-                  <span>Wednesdays</span>
-                  <span className="mx-2 text-muted-foreground">•</span>
-                  <Clock className="h-4 w-4 text-secondary" />
-                  <span>7:30 PM - 8:45 PM</span>
+                <div className="flex flex-col gap-2 text-sm text-primary font-medium mb-6">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4 text-secondary" />
+                    <span>Wednesday – 21:00 to 22:00</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4 text-secondary" />
+                    <span>Friday – 19:00 to 20:30</span>
+                  </div>
                 </div>
                 <a href="https://buy.stripe.com/dRm9AUa7X3Dg0H51VEawo07" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Join Now</Button>
@@ -501,8 +505,8 @@ export default function Home() {
                       <Calendar className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="font-bold">Next Class</p>
-                      <p className="text-primary-foreground/70">This Wednesday at 7:30 PM</p>
+                      <p className="font-bold">Next Classes</p>
+                      <p className="text-primary-foreground/70">Wednesday 21:00 & Friday 19:00</p>
                     </div>
                   </div>
                 </div>

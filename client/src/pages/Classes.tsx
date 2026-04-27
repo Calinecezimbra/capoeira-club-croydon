@@ -98,23 +98,30 @@ export default function Classes() {
               >
                 <div className="bg-primary/5 p-6 border-b border-border">
                   <h3 className="text-2xl font-heading font-bold text-primary">Capoeira Classes for Adults</h3>
-                  <p className="text-secondary font-bold">All Levels</p>
+                  <p className="text-secondary font-bold">Ages 15+ · All Levels</p>
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Calendar className="h-5 w-5 text-secondary" />
-                    <span className="font-medium text-primary">Wednesdays</span>
+                    <span className="font-medium text-primary">
+                      Wednesday – 21:00 to 22:00
+                    </span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
-                    <Clock className="h-5 w-5 text-secondary" />
-                    <span className="font-medium text-primary">7:30 PM - 8:45 PM</span>
+                    <Calendar className="h-5 w-5 text-secondary" />
+                    <span className="font-medium text-primary">
+                      Friday – 19:00 to 20:30
+                    </span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="h-5 w-5 text-secondary" />
-                    <span className="font-medium text-primary">Croydon, UK</span>
+                    <span className="font-medium text-primary">
+                      Croydon — address provided after booking confirmation
+                    </span>
                   </div>
                   <p className="text-sm text-muted-foreground pt-2">
-                    A fun and supportive way to learn the basics or advance your skills. Explore movements, music, and history with expert guidance.
+                    We now have new class times and a new address in Croydon —
+                    contact us for the address after booking confirmation.
                   </p>
                   <Link href="/adult-class">
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90">Book Now</Button>

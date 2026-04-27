@@ -58,14 +58,15 @@ export default function AdultClass() {
           >
             Capoeira Classes for Adults
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial="hidden"
             animate="visible"
             variants={fadeIn}
             transition={{ delay: 0.2 }}
             className="text-xl max-w-2xl mx-auto text-primary-foreground/80"
           >
-            Dynamic and empowering class for adults of all levels
+            We now have new class times and a new address in Croydon — contact
+            us for the address after booking confirmation
           </motion.p>
         </div>
       </section>
@@ -110,9 +111,17 @@ export default function AdultClass() {
                   <Calendar className="h-6 w-6 text-secondary" />
                   Class Schedule
                 </h3>
-                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20">
-                  <p className="text-lg font-semibold text-primary mb-2">🔹 Wednesdays 7:30 PM to 8:45 PM</p>
-                  <p className="text-muted-foreground">Duration: 1 hour 15 minutes per session</p>
+                <div className="bg-secondary/10 rounded-2xl p-6 border border-secondary/20 space-y-3">
+                  <p className="text-lg font-semibold text-primary">
+                    🗓 Wednesday – 21:00 to 22:00
+                  </p>
+                  <p className="text-lg font-semibold text-primary">
+                    🗓 Friday – 19:00 to 20:30
+                  </p>
+                  <p className="text-muted-foreground pt-2">
+                    We now have new class times and a new address in Croydon —
+                    contact us for the address after booking confirmation
+                  </p>
                 </div>
               </div>
 
