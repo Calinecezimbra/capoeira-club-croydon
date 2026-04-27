@@ -305,7 +305,7 @@ export default function Home() {
                 </div>
               </div>
               <CardContent className="p-8">
-                <h3 className="text-2xl font-heading font-bold text-primary mb-3">Adults Capoeira</h3>
+                <h3 className="text-2xl font-heading font-bold text-primary mb-3">Capoeira Classes for Adults</h3>
                 <p className="text-muted-foreground mb-6">
                   Join our supportive adult classes where beginners and experienced practitioners train together. Build fitness, learn authentic techniques, and connect.
                 </p>
