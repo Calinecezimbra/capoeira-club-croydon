@@ -65,8 +65,8 @@ export default function AdultClass() {
             transition={{ delay: 0.2 }}
             className="text-xl max-w-2xl mx-auto text-primary-foreground/80"
           >
-            We now have new class times and address at contact for address after
-            booking confirmation Croydon
+            We now have new class times and a new address in Croydon — contact
+            us for the address after booking confirmation
           </motion.p>
         </div>
       </section>
@@ -126,8 +126,8 @@ export default function AdultClass() {
                     🗓 Friday – 19:00 to 20:30
                   </p>
                   <p className="text-muted-foreground pt-2">
-                    We now have new class times and address at contact for
-                    address after booking confirmation Croydon
+                    We now have new class times and a new address in Croydon —
+                    contact us for the address after booking confirmation
                   </p>
                 </div>
               </div>

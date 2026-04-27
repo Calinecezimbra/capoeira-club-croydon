@@ -115,7 +115,9 @@ export default function Classes() {
                   <h3 className="text-2xl font-heading font-bold text-primary">
                     New Capoeira Classes for Adults (15+) 🔥
                   </h3>
-                  <p className="text-secondary font-bold">Ages 15+</p>
+                  <p className="text-secondary font-bold">
+                    Ages 15+ · All Levels
+                  </p>
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex items-center gap-3 text-muted-foreground">
@@ -133,12 +135,12 @@ export default function Classes() {
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="h-5 w-5 text-secondary" />
                     <span className="font-medium text-primary">
-                      contact for address after booking confirmation Croydon
+                      Croydon — address provided after booking confirmation
                     </span>
                   </div>
                   <p className="text-sm text-muted-foreground pt-2">
-                    We now have new class times and address at contact for
-                    address after booking confirmation Croydon.
+                    We now have new class times and a new address in Croydon —
+                    contact us for the address after booking confirmation.
                   </p>
                   <Link href="/adult-class">
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90">

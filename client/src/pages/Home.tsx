@@ -409,8 +409,8 @@ export default function Home() {
                   New Capoeira Classes for Adults (15+) 🔥
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  We now have new class times and address at contact for address
-                  after booking confirmation Croydon.
+                  We now have new class times and a new address in Croydon —
+                  contact us for the address after booking confirmation.
                 </p>
                 <div className="flex flex-col gap-2 text-sm text-primary font-medium mb-6">
                   <div className="flex items-center gap-2">
