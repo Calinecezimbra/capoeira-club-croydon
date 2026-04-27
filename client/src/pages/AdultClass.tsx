@@ -56,7 +56,7 @@ export default function AdultClass() {
             variants={fadeIn}
             className="text-4xl md:text-6xl font-heading font-bold mb-6"
           >
-            Adults Capoeira Class
+            Capoeira Classes for Adults
           </motion.h1>
           <motion.p 
             initial="hidden"

@@ -97,7 +97,7 @@ export default function Classes() {
                 className="bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="bg-primary/5 p-6 border-b border-border">
-                  <h3 className="text-2xl font-heading font-bold text-primary">Adults Capoeira</h3>
+                  <h3 className="text-2xl font-heading font-bold text-primary">Capoeira Classes for Adults</h3>
                   <p className="text-secondary font-bold">All Levels</p>
                 </div>
                 <div className="p-6 space-y-4">
