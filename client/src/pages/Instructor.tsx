@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Music, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 
 export default function Instructor() {
@@ -12,6 +13,13 @@ export default function Instructor() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Professora Areia — Capoeira Club Croydon</title>
+        <meta name="description" content="Meet Caline Cezimbra, Professora Areia — Capoeira professor, dance instructor and founder of Capoeira Club Croydon. Training in London since 2006, specialising in Afro-Brazilian culture." />
+        <meta property="og:title" content="Professora Areia — Capoeira Club Croydon" />
+        <meta property="og:description" content="Meet Caline Cezimbra, Professora Areia — Capoeira professor and founder of Capoeira Club Croydon, training in London since 2006." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/instructor" />
+      </Helmet>
       {/* Hero Profile */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container">

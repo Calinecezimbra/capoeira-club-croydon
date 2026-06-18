@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import React from "react";
 
 const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -65,6 +66,13 @@ ${message}`;
 
   return (
     <Layout>
+      <Helmet>
+        <title>Contact Us — Capoeira Club Croydon</title>
+        <meta name="description" content="Get in touch with Capoeira Club Croydon. Call or WhatsApp +44 7871 378047, email info@capoeiraclubcroydon.co.uk or send us a message online." />
+        <meta property="og:title" content="Contact Us — Capoeira Club Croydon" />
+        <meta property="og:description" content="Contact Capoeira Club Croydon by phone, email or WhatsApp. We'd love to hear from you." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/contact" />
+      </Helmet>
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
