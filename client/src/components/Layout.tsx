@@ -222,6 +222,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/60">
             <p>&copy; {new Date().getFullYear()} Capoeira Club Croydon. All rights reserved.</p>
+            <p>
+              Powered by{" "}
+              <a
+                href="https://www.czdigitalstudio.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors underline"
+              >
+                Cz Digital Studio
+              </a>
+            </p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
