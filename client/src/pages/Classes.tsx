@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, MapPin, CheckCircle } from "lucide-react";
 import { RegisterInterestDialog } from "@/components/RegisterInterestDialog";
 import { SENDClassRegistrationDialog } from "@/components/SENDClassRegistrationDialog";
+import { MindfulMovesRegistrationDialog } from "@/components/MindfulMovesRegistrationDialog";
 import { Link } from "wouter";
 
 export default function Classes() {
@@ -198,6 +199,51 @@ export default function Classes() {
                   <SENDClassRegistrationDialog 
                     className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
                   />
+                </div>
+              </motion.div>
+
+              {/* Mindful Moves – Capoeira */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow md:col-span-2"
+              >
+                <div className="bg-primary/5 p-6 border-b border-border">
+                  <h3 className="text-2xl font-heading font-bold text-primary">Mindful Moves – Capoeira</h3>
+                  <p className="text-secondary font-bold">For People with Disabilities · All Levels Welcome</p>
+                </div>
+                <div className="p-6 space-y-4">
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <Calendar className="h-5 w-5 text-secondary" />
+                    <span className="font-medium text-primary">Wednesdays</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <Clock className="h-5 w-5 text-secondary" />
+                    <span className="font-medium text-primary">1:00 PM – 3:00 PM</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <MapPin className="h-5 w-5 text-secondary" />
+                    <span className="font-medium text-primary">Lewisham, UK</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground pt-2">
+                    A welcoming, accessible capoeira session designed for people with disabilities. Enrolment is available per trimester — join us to move, connect, and explore the art of capoeira at your own pace.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a
+                      href="https://all.lewisham.gov.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
+                      <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                        Enrol per Trimester
+                      </Button>
+                    </a>
+                    <MindfulMovesRegistrationDialog
+                      className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
+                    />
+                  </div>
                 </div>
               </motion.div>
             </div>
