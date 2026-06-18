@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { EventRegistrationDialog } from "@/components/EventRegistrationDialog";
 
@@ -13,6 +14,13 @@ export default function Events() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Events &amp; Workshops — Capoeira Club Croydon</title>
+        <meta name="description" content="Capoeira Club Croydon events: Black History Month celebration, kids and adult graduations, school collaborations and breast cancer awareness initiatives in Croydon." />
+        <meta property="og:title" content="Events & Workshops — Capoeira Club Croydon" />
+        <meta property="og:description" content="Black History Month celebration, graduations, school collaborations and community events at Capoeira Club Croydon." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/events" />
+      </Helmet>
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, MapPin, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { RegisterInterestDialog } from "@/components/RegisterInterestDialog";
 import { SENDClassRegistrationDialog } from "@/components/SENDClassRegistrationDialog";
 import { Link } from "wouter";
@@ -15,6 +16,13 @@ export default function Classes() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Classes &amp; Programs — Capoeira Club Croydon</title>
+        <meta name="description" content="Capoeira classes for kids, adults, families and SEND students in Croydon. Kids on Fridays 17:00, adults on Wednesdays 21:00 and Fridays 19:00. All levels welcome." />
+        <meta property="og:title" content="Classes & Programs — Capoeira Club Croydon" />
+        <meta property="og:description" content="Capoeira classes for kids, adults, families and SEND students in Croydon. All levels welcome." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/classes" />
+      </Helmet>
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
@@ -104,24 +112,24 @@ export default function Classes() {
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Calendar className="h-5 w-5 text-secondary" />
                     <span className="font-medium text-primary">
-                      Wednesday – 21:00 to 22:00
+                      Wednesdays, 21:00 to 22:00
                     </span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Calendar className="h-5 w-5 text-secondary" />
                     <span className="font-medium text-primary">
-                      Friday – 19:00 to 20:30
+                      Fridays, 19:00 to 20:30
                     </span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="h-5 w-5 text-secondary" />
                     <span className="font-medium text-primary">
-                      Croydon — address provided after booking confirmation
+                      Croydon (address provided after booking)
                     </span>
                   </div>
                   <p className="text-sm text-muted-foreground pt-2">
-                    We now have new class times and a new address in Croydon —
-                    contact us for the address after booking confirmation.
+                    New class times and a new address in Croydon.
+                    Contact us for the address after booking confirmation.
                   </p>
                   <Link href="/adult-class">
                     <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90">Book Now</Button>

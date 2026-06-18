@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, MapPin, Users, Heart, Smile, Trophy, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 
 export default function JoinNow() {
@@ -13,6 +14,13 @@ export default function JoinNow() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Join Now — Capoeira Club Croydon</title>
+        <meta name="description" content="Start your Capoeira journey today. Book your free trial class at Capoeira Club Croydon. Classes for all ages and levels in Croydon, South London." />
+        <meta property="og:title" content="Join Now — Capoeira Club Croydon" />
+        <meta property="og:description" content="Book your free trial Capoeira class at Capoeira Club Croydon. All ages and levels welcome." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/join-now" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
@@ -196,8 +204,9 @@ export default function JoinNow() {
                   <Calendar className="h-8 w-8 text-secondary flex-shrink-0" />
                   <div>
                     <h3 className="font-bold text-xl mb-2">When</h3>
-                    <p className="text-primary-foreground/90">Every Wednesday</p>
-                    <p className="text-primary-foreground/90">7:30 PM - 8:45 PM</p>
+                    <p className="text-primary-foreground/90">Wednesdays, 21:00–22:00</p>
+                    <p className="text-primary-foreground/90">Fridays, 19:00–20:30</p>
+                    <p className="text-primary-foreground/90">Fridays (Kids), 17:00–18:00</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
