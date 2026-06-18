@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ShoppingCart, Calendar, MessageCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 
 export default function KidsClass() {
@@ -40,6 +41,13 @@ export default function KidsClass() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Kids Capoeira Classes Croydon — Ages 5 to 12</title>
+        <meta name="description" content="Kids Capoeira classes in Croydon every Friday from 17:00 to 18:00. Ages 5 to 12. Fun, engaging and educational sessions combining movement, music and Afro-Brazilian culture." />
+        <meta property="og:title" content="Kids Capoeira Classes Croydon — Ages 5 to 12" />
+        <meta property="og:description" content="Kids Capoeira classes in Croydon every Friday from 17:00. Ages 5 to 12. Fun movement, music and culture." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/kids-class" />
+      </Helmet>
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">

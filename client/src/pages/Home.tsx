@@ -7,18 +7,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  ArrowRight,
-  Music,
-  Heart,
-  Users,
-  Globe,
-  Star,
-  MapPin,
-  Calendar,
-  Clock,
-} from "lucide-react";
+import { ArrowRight, Music, Heart, Users, Globe, MapPin, Calendar, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { Link } from "wouter";
 
@@ -40,6 +31,13 @@ export default function Home() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Capoeira Club Croydon — Brazilian Capoeira Classes in South London</title>
+        <meta name="description" content="Women-led Capoeira school in Croydon. Kids classes on Fridays, adult classes on Wednesdays and Fridays. Free trial class available. Rooted in Afro-Brazilian culture." />
+        <meta property="og:title" content="Capoeira Club Croydon — Brazilian Capoeira Classes in South London" />
+        <meta property="og:description" content="Women-led Capoeira school in Croydon. Kids classes on Fridays, adult classes on Wednesdays and Fridays. Free trial class available." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Video with Overlay */}
@@ -385,9 +383,9 @@ export default function Home() {
                 Classes & Programs
               </h3>
             </div>
-            <Button variant="outline" className="hidden md:flex">
-              View Full Schedule
-            </Button>
+            <Link href="/classes">
+              <Button variant="outline" className="hidden md:flex">View Full Schedule</Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -414,11 +412,11 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col gap-2 text-sm text-primary font-medium mb-6">
                   <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-secondary" />
+                    <Calendar className="h-4 w-4 text-secondary" aria-hidden="true" />
                     <span>🗓 Wednesday – 21:00 to 22:00</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-secondary" />
+                    <Calendar className="h-4 w-4 text-secondary" aria-hidden="true" />
                     <span>🗓 Friday – 19:00 to 20:30</span>
                   </div>
                 </div>
@@ -510,69 +508,42 @@ export default function Home() {
           </div>
 
           <div className="mt-8 text-center md:hidden">
-            <Button variant="outline" className="w-full">
-              View Full Schedule
-            </Button>
+            <Link href="/classes">
+              <Button variant="outline" className="w-full">View Full Schedule</Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Reviews Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
-              Community Voices
-            </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">What Our Community Says</h2>
             <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-              Hear from the people who make our community special.
+              Hear from our students and families — and share your own experience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote:
-                  "Capoeira Club Croydon has transformed my fitness journey. The classes are fun, challenging, and full of energy. Professor Areia's passion is contagious.",
-                author: "Benjamin Thistlewood",
-                role: "Adult Student",
-              },
-              {
-                quote:
-                  "My child loves the kids' classes! The instructors are amazing—fun, patient, and engaging. It's been wonderful to see my child grow in confidence.",
-                author: "Emma Thompson",
-                role: "Parent",
-              },
-              {
-                quote:
-                  "The classes are the highlight of my week. The perfect mix of technique, fitness, and fun, all in a supportive community. I've gained confidence and strength.",
-                author: "Oliver Hartman",
-                role: "Adult Student",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white/5 p-8 rounded-2xl border border-white/10 relative"
-              >
-                <div className="text-secondary text-6xl font-serif absolute top-4 left-4 opacity-20">
-                  "
-                </div>
-                <div className="flex gap-1 mb-4 text-secondary">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" />
-                  ))}
-                </div>
-                <p className="text-lg italic mb-6 relative z-10 leading-relaxed">
-                  {item.quote}
-                </p>
-                <div>
-                  <p className="font-bold text-white">{item.author}</p>
-                  <p className="text-sm text-primary-foreground/60">
-                    {item.role}
-                  </p>
-                </div>
-              </div>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.google.com/search?q=Capoeira+Club+Croydon+reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold px-8 rounded-full">
+                Read Our Google Reviews
+              </Button>
+            </a>
+            <a
+              href="https://www.facebook.com/p/Capoeira-Club-Croydon-100090366679284/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold px-8 rounded-full">
+                Reviews on Facebook
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -653,28 +624,23 @@ export default function Home() {
                       <Calendar className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="font-bold">Next Class</p>
-                      <p className="text-primary-foreground/70">
-                        This Wednesday at 7:30 PM
-                      </p>
+                      <p className="font-bold">Next Classes</p>
+                      <p className="text-primary-foreground/70">Wednesday 21:00 & Friday 19:00</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-lg h-14 rounded-full px-8"
-                  >
-                    Book Your First Class
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/10 font-bold text-lg h-14 rounded-full px-8"
-                  >
-                    Contact Us
-                  </Button>
+                  <Link href="/join-now">
+                    <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-lg h-14 rounded-full px-8">
+                      Book Your First Class
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-bold text-lg h-14 rounded-full px-8">
+                      Contact Us
+                    </Button>
+                  </Link>
                 </div>
               </div>
 

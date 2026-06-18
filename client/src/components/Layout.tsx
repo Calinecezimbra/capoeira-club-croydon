@@ -55,7 +55,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              {/* Logo Placeholder - would be replaced by actual logo */}
               <img src="/images/logo.jpg" alt="Capoeira Club Croydon" className="h-12 w-auto rounded-full border-2 border-secondary" />             <span className={`font-heading font-bold text-xl tracking-tight ${isScrolled ? 'text-foreground' : 'text-foreground md:text-white'} transition-colors`}>
                 Capoeira Club <span className="text-secondary">Croydon</span>
               </span>
@@ -222,10 +221,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/60">
             <p>&copy; {new Date().getFullYear()} Capoeira Club Croydon. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            </div>
           </div>
         </div>
       </footer>

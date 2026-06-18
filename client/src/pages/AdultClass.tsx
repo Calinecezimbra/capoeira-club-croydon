@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ShoppingCart, Calendar, MessageCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 
 export default function AdultClass() {
@@ -40,6 +41,13 @@ export default function AdultClass() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Adult Capoeira Classes Croydon — All Levels Welcome</title>
+        <meta name="description" content="Adult Capoeira classes in Croydon. Wednesdays 21:00–22:00 and Fridays 19:00–20:30. All levels welcome. Free trial class available. Book online today." />
+        <meta property="og:title" content="Adult Capoeira Classes Croydon — All Levels Welcome" />
+        <meta property="og:description" content="Adult Capoeira classes in Croydon on Wednesdays and Fridays. All levels welcome. Free trial available." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/adult-class" />
+      </Helmet>
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
@@ -65,8 +73,8 @@ export default function AdultClass() {
             transition={{ delay: 0.2 }}
             className="text-xl max-w-2xl mx-auto text-primary-foreground/80"
           >
-            We now have new class times and a new address in Croydon — contact
-            us for the address after booking confirmation
+            We now have new class times and a new address in Croydon. Contact
+            us for the address after booking confirmation.
           </motion.p>
         </div>
       </section>

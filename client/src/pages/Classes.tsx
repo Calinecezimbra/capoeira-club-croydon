@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, MapPin, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { RegisterInterestDialog } from "@/components/RegisterInterestDialog";
 import { SENDClassRegistrationDialog } from "@/components/SENDClassRegistrationDialog";
 import { Link } from "wouter";
@@ -15,6 +16,13 @@ export default function Classes() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Classes &amp; Programs — Capoeira Club Croydon</title>
+        <meta name="description" content="Capoeira classes for kids, adults, families and SEND students in Croydon. Kids on Fridays 17:00, adults on Wednesdays 21:00 and Fridays 19:00. All levels welcome." />
+        <meta property="og:title" content="Classes & Programs — Capoeira Club Croydon" />
+        <meta property="og:description" content="Capoeira classes for kids, adults, families and SEND students in Croydon. All levels welcome." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/classes" />
+      </Helmet>
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
@@ -115,9 +123,7 @@ export default function Classes() {
                   <h3 className="text-2xl font-heading font-bold text-primary">
                     New Capoeira Classes for Adults (15+) 🔥
                   </h3>
-                  <p className="text-secondary font-bold">
-                    Ages 15+ · All Levels
-                  </p>
+                  <p className="text-secondary font-bold">Ages 15+ · All Levels</p>
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex items-center gap-3 text-muted-foreground">

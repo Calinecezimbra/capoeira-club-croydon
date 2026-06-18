@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowRight, Users, Globe, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 
 export default function About() {
@@ -12,6 +13,13 @@ export default function About() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>About Us — Capoeira Club Croydon</title>
+        <meta name="description" content="Learn about Capoeira Club Croydon — a women-led Afro-Brazilian martial arts school rooted in community, culture and empowerment. Part of the Capoeira Club London network since 2012." />
+        <meta property="og:title" content="About Us — Capoeira Club Croydon" />
+        <meta property="og:description" content="Women-led Afro-Brazilian martial arts school in Croydon rooted in community, culture and empowerment." />
+        <meta property="og:url" content="https://www.capoeiraclubcroydon.co.uk/about" />
+      </Helmet>
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
