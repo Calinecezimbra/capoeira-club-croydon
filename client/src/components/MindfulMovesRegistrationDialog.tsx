@@ -46,7 +46,6 @@ export function MindfulMovesRegistrationDialog({
       parentName: formData.get("name") as string,
       parentEmail: formData.get("email") as string,
       parentPhone: (formData.get("phone") as string) || undefined,
-      childName: formData.get("name") as string,
       additionalInfo: (formData.get("accessNeeds") as string) || undefined,
     });
   };

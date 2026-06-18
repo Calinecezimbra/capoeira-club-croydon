@@ -29,7 +29,7 @@ export const appRouter = router({
           parentName: z.string().min(1, "Parent name is required"),
           parentEmail: z.string().email("Valid email is required"),
           parentPhone: z.string().optional(),
-          childName: z.string().min(1, "Child name is required"),
+          childName: z.string().min(1, "Child name is required").optional(),
           childAge: z.number().int().positive().optional(),
           additionalInfo: z.string().optional(),
         })
@@ -37,18 +37,24 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         // Save to database (skip if DB not available)
         try {
-          await createRegistration(input);
+          await createRegistration({
+            ...input,
+            // childName is required by the DB schema; for adult registrations use participantName as fallback
+            childName: input.childName ?? input.parentName,
+          });
         } catch (error) {
           console.warn("[Registration] Database save failed, continuing with email:", error);
         }
 
         // Notify owner
         const notificationTitle = `New ${input.classType} Registration`;
+        const participantLine = input.childName && input.childName !== input.parentName
+          ? `Child: ${input.childName}${input.childAge ? ` (Age: ${input.childAge})` : ''}\n`
+          : '';
         const notificationContent = `
-Parent: ${input.parentName}
+Participant: ${input.parentName}
 Email: ${input.parentEmail}
-${input.parentPhone ? `Phone: ${input.parentPhone}\n` : ''}Child: ${input.childName}${input.childAge ? ` (Age: ${input.childAge})` : ''}
-${input.additionalInfo ? `\nAdditional Info: ${input.additionalInfo}` : ''}`;
+${input.parentPhone ? `Phone: ${input.parentPhone}\n` : ''}${participantLine}${input.additionalInfo ? `\nAdditional Info: ${input.additionalInfo}` : ''}`;
 
         try {
           await notifyOwner({
