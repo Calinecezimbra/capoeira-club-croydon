@@ -321,11 +321,11 @@ export default function Home() {
                   contact us for the address after booking confirmation.
                 </p>
                   <div className="flex items-center gap-2 text-sm text-primary font-medium mb-6">
-                    <Calendar className="h-4 w-4 text-secondary" />
-                    <span>Wednesdays, 21:00</span>
-                    <span className="mx-2 text-muted-foreground">•</span>
-                    <Calendar className="h-4 w-4 text-secondary" />
-                    <span>Fridays, 19:00</span>
+                    <Calendar className="h-4 w-4 text-secondary" aria-hidden="true" />
+                    <span>Wednesdays 21:00</span>
+                    <span aria-hidden="true" className="mx-2 text-muted-foreground">•</span>
+                    <Calendar className="h-4 w-4 text-secondary" aria-hidden="true" />
+                    <span>Fridays 19:00</span>
                   </div>
                 <a href="https://buy.stripe.com/dRm9AUa7X3Dg0H51VEawo07" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Join Now</Button>
@@ -413,7 +413,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://www.google.com/search?q=Capoeira+Club+Croydon#lrd=0x0:0x0,1"
+              href="https://www.google.com/search?q=Capoeira+Club+Croydon+reviews"
               target="_blank"
               rel="noopener noreferrer"
             >
